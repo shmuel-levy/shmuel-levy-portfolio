@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shmuel Levy - Fullstack Developer Portfolio</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-links-container">
+                <ul>
+                    <li><a href="#home" class="nav-text">Home</a></li>
+                    <li><a href="#about" class="nav-text">About</a></li> 
+                </ul>
+            </div>
+            <a href="#home" class="logo">
+                <i class="ri-code-s-slash-line"></i>
+                <p>Shmuel Levy</p>
+                <i class="ri-code-s-slash-line"></i>
+            </a>
+            <div class="nav-links-container">
+                <ul>
+                    <li><a href="#projects" class="nav-text">Projects</a></li>
+                    <li><a href="#contact" class="nav-text">Contact</a></li> 
+                </ul>
+            </div>
+            <div class="moon">
+                <i class="ri-moon-line link" id="dark-mode-icon" onclick="toggleDarkMode()"></i>
+            </div>
+            <div class="menu-hamburger">
+                <span class="bar-menu"></span>
+                <span class="bar-menu"></span>
+                <span class="bar-menu"></span>
+            </div>
+            <div class="nav-link-container">
+                <ul>
+                    <li><a href="#home" class="nav-text">Home</a></li>
+                    <li><a href="#about" class="nav-text">About</a></li> 
+                    <li><a href="#projects" class="nav-text">Projects</a></li> 
+                    <li><a href="#contact" class="nav-text">Contact</a></li> 
+                </ul>
+            </div>
+        </nav>        
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up">
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Shmuel Levy</span>
+                    <span class="title">Fullstack Developer</span>
+                </h1>
+                <p class="hero-description">
+                    Passionate about creating innovative web applications with modern technologies. 
+                    Based in Tel Aviv, specializing in React, Node.js, and full-stack development.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="tech-orbit">
+                    <div class="orbit-ring">
+                        <div class="tech-icon" style="--i:0deg">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
+                        </div>
+                        <div class="tech-icon" style="--i:72deg">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                        </div>
+                        <div class="tech-icon" style="--i:144deg">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                        </div>
+                        <div class="tech-icon" style="--i:216deg">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+                        </div>
+                        <div class="tech-icon" style="--i:288deg">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
+                        </div>
+                    </div>
+                    <div class="profile-container">
+                        <div class="profile-image">
+                            <img src="assets/img/beautiful-photo-model.jpg" alt="Shmuel Levy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Fullstack Developer from Tel Aviv</h3>
+                    <p>
+                        I'm a motivated full-stack developer with strong communication skills and a dedication to teamwork. 
+                        As a quick learner with a passion for continuous improvement, I explore new concepts such as design 
+                        patterns and problem-solving algorithms in my free time.
+                    </p>
+                    <p>
+                        I'm eager to contribute to innovative projects and grow within a dynamic tech environment. 
+                        My expertise spans from frontend frameworks like React and Angular to backend technologies 
+                        including Node.js and MongoDB.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Skills Learned</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="about-skills" data-aos="fade-left">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">React</span>
+                                <span class="skill-item">Angular</span>
+                                <span class="skill-item">Vue</span>
+                                <span class="skill-item">TypeScript</span>
+                                <span class="skill-item">JavaScript</span>
+                                <span class="skill-item">HTML5</span>
+                                <span class="skill-item">CSS3</span>
+                                <span class="skill-item">SCSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">Node.js</span>
+                                <span class="skill-item">Express</span>
+                                <span class="skill-item">MongoDB</span>
+                                <span class="skill-item">Socket.IO</span>
+                                <span class="skill-item">REST APIs</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Libraries</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">Git/GitHub</span>
+                                <span class="skill-item">Vite</span>
+                                <span class="skill-item">Redux</span>
+                                <span class="skill-item">Axios</span>
+                                <span class="skill-item">AJAX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://res.cloudinary.com/dadlyemp7/image/upload/v1752934075/xx6x0c2u4jw33l5kai47.png" alt="Minday Project" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://minday.onrender.com/" target="_blank" class="project-link"><i class="ri-external-link-line"></i></a>
+                                <a href="https://github.com/shmuel-levy/Minday" target="_blank" class="project-link"><i class="ri-github-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Minday</h3>
+                        <p>A comprehensive project management application clone built with React and Node.js, featuring task management and team collaboration features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.IO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://res.cloudinary.com/dadlyemp7/image/upload/v1752933403/imotqa3pfskssb3uckrb.png" alt="Appsus" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://shmuel-levy.github.io/Appsus/" target="_blank" class="project-link"><i class="ri-external-link-line"></i></a>
+                                <a href="https://github.com/shmuel-levy/Appsus" target="_blank" class="project-link"><i class="ri-github-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Appsus</h3>
+                        <p>A unified productivity application combining email management and note-taking functionality with seamless integration and responsive design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://res.cloudinary.com/dadlyemp7/image/upload/v1752934208/tuwuttxdbrtdmrkbnybc.png" alt="Space Invaders Game" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://shmuel-levy.github.io/Space-Invaders/" target="_blank" class="project-link"><i class="ri-external-link-line"></i></a>
+                                <a href="https://github.com/shmuel-levy/Space-Invaders" target="_blank" class="project-link"><i class="ri-github-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Space Invaders Game</h3>
+                        <p>A modern, responsive implementation of the classic Space Invaders arcade game built with vanilla JavaScript, HTML5, and CSS3. Features classic gameplay with modern UI, sound effects, and responsive design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Canvas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's work together</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="ri-mail-line"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>shmuellevy16@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="ri-phone-line"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+972 58-594-3018</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="ri-map-pin-line"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Tel Aviv, Israel</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shmuel-levy-760171295/" target="_blank" class="social-link">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                        <a href="https://github.com/shmuel-levy" target="_blank" class="social-link">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/shmuel_levy12/" target="_blank" class="social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form action="https://formspree.io/f/xpzgwqjq" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="ri-code-s-slash-line"></i>
+                    <span>Shmuel Levy</span>
+                </div>
+                <p>&copy; 2024 Shmuel Levy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your message! I will get back to you soon.');
+                form.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
