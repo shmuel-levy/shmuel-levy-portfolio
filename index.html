@@ -15,6 +15,7 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -37,9 +38,6 @@
                     <li><a href="#contact" class="nav-text">Contact</a></li> 
                 </ul>
             </div>
-            <div class="moon">
-                <i class="ri-moon-line link" id="dark-mode-icon" onclick="toggleDarkMode()"></i>
-            </div>
             <div class="menu-hamburger">
                 <span class="bar-menu"></span>
                 <span class="bar-menu"></span>
@@ -61,16 +59,22 @@
             <div class="hero-text" data-aos="fade-up">
                 <h1 class="hero-title">
                     <span class="greeting">Hi, I'm</span>
-                    <span class="name">Shmuel Levy</span>
-                    <span class="title">Fullstack Developer</span>
+                    <span class="name neon-text">Shmuel Levy</span>
+                    <span class="title neon-text">Fullstack Developer</span>
                 </h1>
                 <p class="hero-description">
                     Passionate about creating innovative web applications with modern technologies. 
                     Based in Tel Aviv, specializing in React, Node.js, and full-stack development.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="ri-eye-line"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="ri-message-3-line"></i>
+                        Get In Touch
+                    </a>
                     <a href="assets/files/Shmuel Levy's Resume.pdf" download class="btn btn-accent">
                         <i class="ri-download-line"></i>
                         Download CV
@@ -99,8 +103,24 @@
                     </div>
                     <div class="profile-container">
                         <div class="profile-image">
-                            <img src="assets/img/beautiful-photo-model.jpg" alt="Shmuel Levy" />
+                            <img src="https://res.cloudinary.com/dadlyemp7/image/upload/v1753776912/walfvtigaowkuhbvxlbb.jpg" alt="Shmuel Levy" />
                         </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Elements -->
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s; --x: 10%; --y: 20%;">
+                        <i class="ri-code-s-slash-line"></i>
+                    </div>
+                    <div class="floating-element" style="--delay: 1s; --x: 80%; --y: 30%;">
+                        <i class="ri-bug-line"></i>
+                    </div>
+                    <div class="floating-element" style="--delay: 2s; --x: 20%; --y: 70%;">
+                        <i class="ri-terminal-line"></i>
+                    </div>
+                    <div class="floating-element" style="--delay: 3s; --x: 70%; --y: 80%;">
+                        <i class="ri-database-2-line"></i>
                     </div>
                 </div>
             </div>
@@ -195,9 +215,16 @@
                         <img src="https://res.cloudinary.com/dadlyemp7/image/upload/v1752934075/xx6x0c2u4jw33l5kai47.png" alt="Minday Project" />
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://minday.onrender.com/" target="_blank" class="project-link"><i class="ri-external-link-line"></i></a>
-                                <a href="https://github.com/shmuel-levy/Minday" target="_blank" class="project-link"><i class="ri-github-fill"></i></a>
+                                <a href="https://minday.onrender.com/" target="_blank" class="project-link" title="Live Demo">
+                                    <i class="ri-external-link-line"></i>
+                                </a>
+                                <a href="https://github.com/shmuel-levy/Minday" target="_blank" class="project-link" title="Source Code">
+                                    <i class="ri-github-fill"></i>
+                                </a>
                             </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge">Live</span>
                         </div>
                     </div>
                     <div class="project-content">
@@ -336,7 +363,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
     <script>
         AOS.init({
             duration: 1000,
@@ -344,6 +370,7 @@
             offset: 100
         });
 
+        // Enhanced smooth scrolling with easing
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -357,6 +384,31 @@
             });
         });
 
+        // Parallax effect for floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.floating-element');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Interactive cursor effect
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.createElement('div');
+            cursor.className = 'custom-cursor';
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+            document.body.appendChild(cursor);
+            
+            setTimeout(() => {
+                cursor.remove();
+            }, 100);
+        });
+
+        // Enhanced form submission with animations
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -368,19 +420,56 @@
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             
-            submitBtn.textContent = 'Opening Gmail...';
+            // Add loading animation
+            submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Sending...';
             submitBtn.disabled = true;
+            submitBtn.style.animation = 'spin 1s linear infinite';
             
             const mailtoLink = `mailto:shmuellevy16@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
             
             setTimeout(() => {
                 window.open(mailtoLink);
-                alert('Thank you for your message! Gmail should open with your message ready to send.');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 500);
+                
+                // Success animation
+                submitBtn.innerHTML = '<i class="ri-check-line"></i> Sent!';
+                submitBtn.style.background = 'var(--neon-green)';
+                submitBtn.style.animation = 'none';
+                
+                setTimeout(() => {
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 2000);
+            }, 1000);
         });
+
+        // Add spin animation for loading
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            
+            .custom-cursor {
+                position: fixed;
+                width: 20px;
+                height: 20px;
+                background: var(--neon-cyan);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9999;
+                opacity: 0.7;
+                animation: cursorPulse 0.5s ease-out;
+            }
+            
+            @keyframes cursorPulse {
+                0% { transform: scale(0); opacity: 1; }
+                100% { transform: scale(1); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
